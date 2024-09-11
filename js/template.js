@@ -12,7 +12,7 @@ function templateAddTask() {
                 <div class="groupButtonForm">
                     <div class="test2">
                     <div class="h2Container">
-                        <h2>Add Task</h2>
+                        <h2 id="add_task_title_tp">Add Task</h2>
                     </div>
                 </div>
                 <div class="test3">

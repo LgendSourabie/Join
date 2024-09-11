@@ -68,7 +68,7 @@ const generateError = (errorType, errorMsg) => {
  * @param {string} action - name (without extension) of the page to display
  */
 const userAction = function (action) {
-  window.location.href = `../${action}.html`;
+  window.location.href = `${action}.html`;
 };
 
 /**

@@ -21,6 +21,10 @@ body {
 .boar-progress-feedback {
   cursor: pointer;
 }
+#add_task_title_tp {
+  font-size: 61px;
+  margin-block: 3rem 1rem;
+}
 
 .disp-flex {
   display: flex;
@@ -543,10 +547,10 @@ a {
     font-size: 17px;
   }
   .task-info-section {
-    padding-inline: 2rem;
+    padding-inline: 1rem;
   }
   .menu {
-    padding-left: 2rem;
+    padding-left: 1rem;
   }
   .login {
     margin-right: 2rem;
@@ -554,6 +558,12 @@ a {
 }
 
 @media (width<=760px) {
+  #add_task_title,
+  #add_task_title_tp {
+    margin-block: 2rem;
+    font-size: 32px;
+  }
+
   .right-side-section {
     width: 100%;
   }
@@ -588,8 +598,9 @@ a {
     padding-left: unset;
     padding-block: unset;
     border-radius: 19px;
-    padding-inline: 0.5rem;
+    /* padding-inline: 0.5rem; */
     margin-block: 0.2rem;
+    width: 65px;
   }
   .marketing-slogan {
     flex-direction: column;
@@ -606,7 +617,7 @@ a {
   }
   .title {
     margin-top: -7rem;
-    font-size: 30px;
+    font-size: 32px;
   }
   .right-greeting {
     display: flex;
@@ -695,6 +706,7 @@ a {
   }
   .task-overview {
     width: 95%;
+    margin: 0 auto;
   }
 
   .marketing-slogan {

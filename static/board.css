@@ -19,7 +19,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 73px;
-  margin-top: 4.97rem;
+  margin-block: 3rem 1rem;
   margin-left: 4rem;
   margin-right: 4rem;
 }
@@ -49,7 +49,7 @@ body {
 }
 
 .addandsearch button img {
-  height: 32px;
+  height: 18px;
   width: 1.5rem;
 }
 
@@ -72,9 +72,9 @@ body {
 }
 
 .searchtask img {
-  margin-left: 1rem;
+  margin-left: 2rem;
   height: 32px;
-  width: 3rem;
+  width: 20px;
 }
 
 .searchtask input {
@@ -108,7 +108,6 @@ body {
 
 .todosplit {
   width: 15.25rem;
-  margin-right: 1rem;
   margin-bottom: -1rem;
 }
 
@@ -132,12 +131,13 @@ body {
 
 .todoscontainer {
   width: 100%;
-  padding: 1.25rem 0 1.25rem 0;
+  padding-top: 2.25rem;
   border-radius: 10px;
   cursor: pointer;
   overflow-x: scroll;
   overflow-y: hidden;
   user-select: none;
+  padding-inline: 0.175rem;
 }
 
 .todoscontainer {
@@ -150,7 +150,6 @@ body {
 }
 
 .todocard {
-  
   background-color: white;
   gap: 0.36rem;
   border-radius: 1.5rem;
@@ -158,7 +157,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  box-shadow: 0px 0px 0.36rem 0.19rem #00000014;
+  box-shadow: 0px 0px 2px 2px #00000014;
 }
 
 .todocard span {
@@ -433,8 +432,8 @@ body {
 }
 
 .closeEdit {
-    height: 30px;
-  }
+  height: 30px;
+}
 
 .editTaskContainer {
   background: white;
@@ -442,15 +441,14 @@ body {
   padding: 20px 20px;
 }
 
-.closeEditContainer{
+.closeEditContainer {
   display: flex;
   justify-content: flex-end;
 }
 
-.btn{
+.btn {
   max-height: 240px;
 }
-
 
 @media (width<=800px) {
   .todosection {
@@ -458,7 +456,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     /* padding: 0 2rem 0 2rem; */
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 
   .todosplit {
@@ -480,10 +478,9 @@ body {
   }
 
   .todocard {
-    min-width: 244px;
+    min-width: 271px;
   }
 }
-
 
 @media (width<=1050px) {
   .headline {
@@ -494,8 +491,6 @@ body {
     display: flex;
     flex-direction: column;
   }
-
-
 }
 
 @media (width<=1300px) {

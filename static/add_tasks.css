@@ -84,16 +84,16 @@ body {
   padding-top: 7rem;
 }
 
-.addTaskContainerTwo{
+.addTaskContainerTwo {
   width: 880px;
 }
 
-.groupButtonForm{
+.groupButtonForm {
   display: flex;
   flex-direction: column;
 }
 
-h2 {
+#add_task_title {
   font-size: 73px;
 }
 
@@ -105,31 +105,31 @@ h2 {
   border-radius: 10px;
   padding: 16px;
   cursor: pointer;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 100%;
-  border: 1px solid #A8A8A8;
+  border: 1px solid #a8a8a8;
 }
-.buttonSubtask{
+.buttonSubtask {
   position: absolute;
   right: 1rem;
   top: 0.75rem;
 }
-  
+
 .inputAddTaskSubtask {
   width: 100%;
   height: 100%;
   padding: 16px;
 }
 
-.test_test{
+.test_test {
   position: relative;
   border-radius: 10px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 textarea {
   border-radius: 10px;
-  border: 1px solid #A8A8A8;
+  border: 1px solid #a8a8a8;
   padding: 16px;
   outline: none;
   cursor: pointer;
@@ -145,7 +145,7 @@ textarea {
 
 select {
   border-radius: 10px;
-  border: 1px solid #A8A8A8;
+  border: 1px solid #a8a8a8;
   padding: 16px;
   cursor: pointer;
   appearance: none;
@@ -246,8 +246,8 @@ select {
 
 .clearButton:hover {
   cursor: pointer;
-  border-color: #29ABE2;
-  color: #29ABE2;
+  border-color: #29abe2;
+  color: #29abe2;
   box-shadow: -2px 0px 6px 0px rgb(0, 0, 0, 0.2);
 }
 
@@ -268,26 +268,26 @@ select {
 
 .createTaskButton:hover {
   cursor: pointer;
-  background-color: #29ABE2;
-  border-color: #29ABE2;
+  background-color: #29abe2;
+  border-color: #29abe2;
   border: unset;
   box-shadow: -2px 0px 6px 0px rgb(0, 0, 0, 0.2);
 }
 
-.bgUrgent{
-  background-color: rgb(255,61,0);
+.bgUrgent {
+  background-color: rgb(255, 61, 0);
   color: white;
   font-weight: 700;
 }
 
-.bgMedium{
-  background-color: rgb(255,168,0);
+.bgMedium {
+  background-color: rgb(255, 168, 0);
   color: white;
   font-weight: 700;
 }
 
-.bgLow{
-  background-color: rgb(122,226,41);
+.bgLow {
+  background-color: rgb(122, 226, 41);
   color: white;
   font-weight: 700;
 }
@@ -385,7 +385,7 @@ li {
 }
 
 .editContainerSubtask {
-  border: 1px solid #29ABE2;
+  border: 1px solid #29abe2;
   border-left-style: none;
   border-right-style: none;
   border-top-style: none;
@@ -400,7 +400,8 @@ li {
   right: 0px;
 }
 
-.subtasksPlusIMGNew:hover, .newSubtaskImgsHover:hover {
+.subtasksPlusIMGNew:hover,
+.newSubtaskImgsHover:hover {
   cursor: pointer;
   background-color: lightgrey;
   border-radius: 50%;
@@ -408,16 +409,16 @@ li {
 
 #subtasks {
   border-radius: 10px;
-  background: #FFFFFF;
-  border: 1px solid #A8A8A8;
+  background: #ffffff;
+  border: 1px solid #a8a8a8;
 }
 
 .category {
   padding: 16px;
-  border: 1px solid #A8A8A8;
+  border: 1px solid #a8a8a8;
   border-radius: 10px;
   cursor: pointer;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 /* RESPONSIVE DESIGN */
@@ -437,17 +438,17 @@ li {
   height: 56px;
   border: 1px solid black;
   background-color: white;
-  color: #29ABE2;
+  color: #29abe2;
   border-radius: 50%;
 }
 
 .dropdown {
   padding: 16px;
-  border: 1px solid #A8A8A8;
+  border: 1px solid #a8a8a8;
   width: 100%;
   border-radius: 10px;
   cursor: pointer;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .container-btn-name-box {
@@ -460,7 +461,7 @@ li {
 .options {
   width: 100%;
   border: 1px solid white;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 10px;
   margin-top: 12px;
   z-index: 200;
@@ -493,7 +494,8 @@ li {
   align-items: center;
 }
 
-.test6, .test7 {
+.test6,
+.test7 {
   display: flex;
   justify-content: end;
   max-width: 850px;
@@ -511,7 +513,7 @@ li {
   height: 2rem;
   border-radius: 50%;
   margin-left: 0.3rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .btn-grp {
@@ -519,7 +521,7 @@ li {
   border-radius: 50%;
   height: 2rem;
   margin-top: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-right: 10px;
   height: 42px;
   width: 42px;
@@ -539,8 +541,7 @@ li {
 }
 
 @media (max-width: 1295px) {
-
-  h2 {
+  #add_task_title {
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -611,8 +612,7 @@ li {
 }
 
 @media (max-width: 1024px) {
-
-  h2 {
+  #add_task_title {
     font-size: 56px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -646,18 +646,21 @@ li {
     top: 415px;
     width: 64%;
   }
-
 }
 
 @media (max-width: 768px) {
+  #add_task_title {
+    margin-block: 2rem;
+    font-size: 32px;
+  }
 
   .addTaskContainerOne {
     padding-top: 3rem;
   }
 
-  h2 {
+  /* h2 {
     font-size: 56px;
-  }
+  } */
 
   .clearButton {
     display: none;
@@ -676,11 +679,9 @@ li {
     top: 415px;
     width: 82%;
   }
-
 }
 
 @media (max-width: 480px) {
-
   .UserIMG {
     width: 40x;
     height: 40px;
@@ -736,11 +737,9 @@ li {
   .options {
     width: 75%;
   }
-
 }
 
 @media (max-width: 400px) {
-
   .test2 {
     width: 80%;
   }
@@ -753,11 +752,11 @@ li {
     width: 95%;
   }
 
-  h2 {
+  /* h2 {
     font-size: 40px;
     margin-top: 5px;
     margin-bottom: 5px;
-  }
+  } */
 
   .options {
     width: 84%;
@@ -767,11 +766,9 @@ li {
   .footerAddTask {
     margin-bottom: 100px;
   }
-
 }
 
 @media (max-width: 370px) {
-
   .testPrio {
     width: 80px;
   }
@@ -779,5 +776,4 @@ li {
   .prioSelection {
     gap: 0;
   }
-
 }

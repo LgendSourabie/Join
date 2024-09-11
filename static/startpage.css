@@ -46,9 +46,9 @@ a {
     height: 300px;
   }
   100% {
-    width: 100.03px;
+    width: 70px;
     height: 121.97px;
-    transform: translate(calc(-50vw + 8rem), calc(-50vh + 6rem));
+    transform: translate(calc(-50vw + 6rem), calc(-50vh + 4rem));
   }
 }
 
@@ -124,7 +124,7 @@ a {
 }
 .input-login::placeholder {
   font-family: 'Inter';
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
@@ -192,9 +192,9 @@ a {
 }
 
 .log-guest-btn {
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 25.2px;
+  line-height: 19.2px;
   text-decoration: none;
 }
 .btn-line {
@@ -318,8 +318,11 @@ a {
 }
 
 @media (width<=620px) {
+  .login-body {
+    height: 100dvh !important;
+  }
   .user-log-data-section {
-    width: 95%;
+    width: 70%;
   }
   .btm-bar {
     width: 80px;
@@ -353,12 +356,14 @@ a {
     bottom: 2rem;
   }
   .input-grp-section {
-    width: 95%;
+    width: 88%;
   }
+
   .user-log-data-section {
     margin-top: -2rem;
     padding-bottom: 1.2rem !important;
     padding-block: unset;
+    width: 95%;
   }
   .icon-links-login {
     bottom: 5rem;
@@ -378,6 +383,9 @@ a {
     animation-iteration-count: 1;
     animation-delay: 1000ms;
     animation-fill-mode: both;
+  }
+  .input-login::placeholder {
+    line-height: 18px;
   }
 
   @keyframes logo-to-corner {
