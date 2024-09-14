@@ -67,8 +67,8 @@ body {
   background-color: rgb(246, 247, 248);
   display: flex;
   flex-direction: column;
-  padding-top: 7rem;
-  padding-left: 3.5rem;
+  /* padding-top: 7rem; */
+  padding-left: 3rem;
 }
 
 .addTaskContainerLeftRight {
@@ -85,7 +85,7 @@ body {
 }
 
 .addTaskContainerTwo {
-  width: 880px;
+  width: 790px;
 }
 
 .groupButtonForm {
@@ -103,7 +103,7 @@ body {
 
 .inputAddTask {
   border-radius: 10px;
-  padding: 16px;
+  padding: 10px;
   cursor: pointer;
   background-color: #ffffff;
   width: 100%;
@@ -118,7 +118,7 @@ body {
 .inputAddTaskSubtask {
   width: 100%;
   height: 100%;
-  padding: 16px;
+  padding: 10px;
 }
 
 .test_test {
@@ -138,7 +138,7 @@ textarea {
 .containerLeft {
   display: flex;
   flex-direction: column;
-  width: 440px;
+  width: 395px;
   gap: 8px;
   padding-right: 24px;
 }
@@ -146,16 +146,18 @@ textarea {
 select {
   border-radius: 10px;
   border: 1px solid #a8a8a8;
-  padding: 16px;
+  padding: 10px;
   cursor: pointer;
   appearance: none;
-  background-image: url('../img/img/arrow_drop_down.svg');
+  background-image: url('../assets/extra_icons/arrow_drop_down.svg');
   background-repeat: no-repeat;
   background-position-y: center;
   padding-right: 1rem;
   background-position-x: right;
   background-origin: content-box;
   outline: none;
+  font-family: 'Inter';
+  font-size: 16px;
 }
 
 .subtasksPlusIMG:hover {
@@ -166,14 +168,13 @@ select {
 
 .seperatorContainer {
   width: 1px;
-  height: 424px;
   background-color: #d1d1d1;
 }
 
 .containerRight {
   display: flex;
   flex-direction: column;
-  width: 440px;
+  width: 395px;
   gap: 8px;
   padding-left: 24px;
 }
@@ -183,15 +184,17 @@ select {
   flex-direction: column;
 }
 
+.categoryAddTask {
+  margin-top: 1.1rem;
+}
 .addTaskOverview {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.5rem;
 }
 
 .prioSelection {
   display: flex;
-  justify-content: space-between;
   gap: 16px;
 }
 
@@ -202,17 +205,15 @@ select {
 
 .prioUrgentIMG {
   width: 20px;
-  height: 14.51px;
+  /* height: 14.51px; */
 }
 
 .prioMediumIMG {
   width: 20px;
-  height: 7.45px;
 }
 
 .prioLowIMG {
   width: 20px;
-  height: 14.51px;
 }
 
 .spanFooter {
@@ -223,8 +224,8 @@ select {
 .footerAddTask {
   display: flex;
   justify-content: space-between;
-  width: 880px;
-  margin-top: 100px;
+  width: 790px;
+  margin-top: 3rem;
 }
 
 .footerAddTaskButtons {
@@ -233,11 +234,10 @@ select {
 }
 
 .clearButton {
-  height: 56px;
-  width: 110px;
+  padding: 0.5rem 1rem;
   border-radius: 10px;
   gap: 4px;
-  font-size: 20px;
+  font-size: 18px;
   border: 1px solid rgb(42, 54, 71);
   display: flex;
   align-items: center;
@@ -252,14 +252,12 @@ select {
 }
 
 .createTaskButton {
-  height: 56px;
-  width: 183px;
   border-radius: 10px;
-  padding: 16px;
+  padding: 0.25rem 0.5rem;
   gap: 4px;
   background-color: rgb(42, 54, 71);
   color: #ffffff;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -298,12 +296,12 @@ select {
 }
 
 .containerLeftSpan {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
 }
 
 .spanSubtasks {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .test3 {
@@ -424,8 +422,8 @@ li {
 /* RESPONSIVE DESIGN */
 
 .testPrio {
-  width: 136px;
-  height: 56px;
+  width: 95px;
+  /* height: 54px; */
   border-radius: 10px;
 }
 
@@ -443,7 +441,7 @@ li {
 }
 
 .dropdown {
-  padding: 16px;
+  padding: 10px;
   border: 1px solid #a8a8a8;
   width: 100%;
   border-radius: 10px;
@@ -463,8 +461,9 @@ li {
   border: 1px solid white;
   background-color: #ffffff;
   border-radius: 10px;
-  margin-top: 12px;
+  margin-top: 1.5rem;
   z-index: 200;
+  box-shadow: 0 0 1px 0px;
 }
 
 .option {
@@ -540,7 +539,7 @@ li {
   right: 30px;
 }
 
-@media (max-width: 1295px) {
+@media (max-width: 800px) {
   #add_task_title {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -700,7 +699,7 @@ li {
   }
 
   .test3 {
-    width: 85%;
+    width: 100%;
     align-items: center;
   }
 
@@ -723,11 +722,14 @@ li {
 
   .footerAddTask {
     justify-content: center;
-    margin-top: 65px;
+    margin-top: 30px;
   }
 
   .createTaskButton {
-    margin-bottom: 100px;
+    margin-bottom: 2rem;
+  }
+  .createTaskButton {
+    padding: 0.65rem 0.5rem;
   }
 
   .spanOption {
@@ -745,11 +747,11 @@ li {
   }
 
   .containerLeft {
-    width: 95%;
+    width: 100%;
   }
 
   .containerRight {
-    width: 95%;
+    width: 100%;
   }
 
   /* h2 {
@@ -774,6 +776,6 @@ li {
   }
 
   .prioSelection {
-    gap: 0;
+    gap: 1px;
   }
 }

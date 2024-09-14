@@ -37,7 +37,6 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 10rem;
-  height: 48px;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.63rem;
   border: 1px;
@@ -62,6 +61,7 @@ body {
   border-color: #a8a8a8;
   display: flex;
   align-items: center;
+  padding-block: 2px;
 }
 
 .bold-task-title {
@@ -78,7 +78,6 @@ body {
 }
 
 .searchtask input {
-  height: 48px;
   width: 14.5rem;
   border: none;
   border-radius: 10px;
@@ -119,6 +118,17 @@ body {
   flex-wrap: wrap;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
+}
+
+.overlayedit,
+.overlaydelete {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+.overlaychange > span {
+  height: 23px;
+  border: 1px solid black;
+  border: transparent;
 }
 
 .overlaydelete,
@@ -278,10 +288,15 @@ body {
 }
 
 .overlaybutton img {
-  width: 2rem;
-  height: 32px;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: 0.25rem;
   border-radius: 3.5rem;
+  cursor: pointer;
+}
+
+.overlaybutton img:hover {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .overlay h1 {
@@ -315,6 +330,7 @@ body {
 .overlaychange {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -372,7 +388,7 @@ body {
 }
 
 .headlineAndAddTask img {
-  height: 20px;
+  height: 16px;
 }
 
 .notask {
@@ -455,8 +471,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* padding: 0 2rem 0 2rem; */
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   }
 
   .todosplit {

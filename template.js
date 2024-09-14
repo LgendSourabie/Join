@@ -70,11 +70,8 @@ function templateAddTask() {
                             <ul id="subtasksList"></ul>
                         </div> 
                     </div>
-                </div>
-                </div>
-            </div>
-                <div class="addTaskContainerTwo">
-                        <div class="footerAddTask">
+                    <!--  -->
+                    <div class="footerAddTask">
                             <div class="spanFooter">
                                 <span class="star">*</span>
                                 <span>This field is required</span>
@@ -89,6 +86,28 @@ function templateAddTask() {
                                 </button>
                             </div>
                         </div>
+                    <!--  -->
+                </div>
+                </div>
+                <!--  -->
+           
+            </div>
+                <div class="addTaskContainerTwo">
+                        <!-- <div class="footerAddTask">
+                            <div class="spanFooter">
+                                <span class="star">*</span>
+                                <span>This field is required</span>
+                            </div>
+                            <div class="footerAddTaskButtons">
+                                <div onclick="clearTask()" id="clearButton" class="clearButton">
+                                    <span>Clear X</span>
+                                  </div>
+                                <button id="createTaskButton" class="createTaskButton">
+                                    <span>Create Task</span>
+                                    <img class="imgCheck" src="../img/img/check.svg" alt="">
+                                </button>
+                            </div>
+                        </div> -->
                 </div>
             </div>
         </div>
