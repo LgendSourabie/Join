@@ -135,6 +135,7 @@ function showContactResponsivTemplate(jsonIndex) {
         <div class="d-flex justify-content-between align-items-start w-100">
           <div class="contacts-headline">
             <h2>Contacts</h2>
+            <div class="sep-line"></div>
             <span>Better with a team</span>
             <div class="border-responsive-single"></div>
           </div>

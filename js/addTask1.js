@@ -326,7 +326,7 @@ function options() {
   if (field) field.innerHTML = '';
   for (let i = 0; i < listeOption.length; i++) {
     const option = listeOption[i];
-    field.innerHTML += optionsHTMLTemplate(i, option, initial, colors);
+    field.innerHTML += optionsHTMLTemplate(i, option, initial, colors[i]);
     document.getElementById(`btn-${i}`).style.backgroundColor = `${colors[i]}`;
   }
 }

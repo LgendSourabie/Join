@@ -172,8 +172,7 @@ a {
 }
 .task-info-section {
   background-color: rgb(246, 247, 248);
-  padding-inline: 6rem;
-  padding-left: 6rem;
+  padding-inline: 4rem;
   height: calc(100vh - 70px - 3rem);
   /* display: flex; */
   flex-direction: column;
@@ -225,7 +224,7 @@ a {
 }
 .blue-separator-line {
   height: 59px;
-  border: 3px solid #29abe2;
+  border: 2px solid #29abe2;
 }
 .blue-separator-line-responsive {
   display: none;

@@ -410,7 +410,9 @@ function templateContacts() {
             </div>
             <div class="contact-single-view" id="contact-single-view">
                 <div class="contacts-headline">
-                    <h2>Contacts</h2><span>Better with a team</span>
+                    <h2>Contacts</h2>
+                    <div class="sep-line"></div>
+                    <span>Better with a team</span>
                     <div id="contact-success" class="contact-success">Contact succesfully created</div>
                 </div>
                 <div class="contact-single-view-info" id="current-contact"> </div>
@@ -582,7 +584,7 @@ function templateLegalNotice() {
                     <a class="mail-links" href="#">Ibrahima-Pascal-Henrik-Thomas</a>
                   </li>
                   <li class="list-notice">
-                    <a class="mail-links" href="mailto:join803@ibrahima.de">join803@da.de</a>
+                    <a class="mail-links" href="mailto:join803@ibrahima.de">ibrahima-sourabie@join803.de</a>
                   </li>
                   <li class="list-notice">
                     <a class="mail-links" href="#">Musterstraße 10, Munich</a>
@@ -595,7 +597,7 @@ function templateLegalNotice() {
                   <ul class="list-email">
                     <li class="list-notice">
                       Email:
-                      <a class="mail-links" href="mailto:join803@ibrahima.de">join803@ibrahima.de</a>
+                      <a class="mail-links" href="mailto:join803@ibrahima.de">contact@ibrahima-sourabie.com</a>
                     </li>
                   </ul>
                 </div>
@@ -666,7 +668,7 @@ function templateLegalNotice() {
               </div>
               <div class="help-text">
                 For any questions or notices, please contact us at
-                <a class="mail-links" href="mailto:join803@da.de">join803@da.de</a>.
+                <a class="mail-links" href="mailto:join803@da.de">contact@ibrahima-sourabie.com</a>.
               </div>
               <div class="date-legal-notice">Date: December 05, 2023</div>
             </span>

@@ -1,24 +1,21 @@
-let alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',];
+let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 let contacts = [];
 let highlightedContact;
 let currentContact;
 let selectedContact;
 let edit = false;
 let contactIndex = -1;
-let x = window.matchMedia('(max-width: 1300px)')
-
+let x = window.matchMedia('(max-width: 1300px)');
 
 async function renderContactSection() {
   await loadContacts();
   renderContacts();
 }
 
-
 function renderContacts() {
   insertDirectory();
   insertContacts();
 }
-
 
 function openContact(i) {
   selectedContact = 'contact-' + i;
@@ -37,60 +34,52 @@ function hideContact() {
   document.getElementById('current-contact').innerHTML = '';
 }
 
-
 function showContact(i) {
   let newContact = document.getElementById('new-contact');
-  let currentContact = document.getElementById('current-contact')
-  currentContact.innerHTML = ''
-  classListAdd('current-contact', 'fly-in-contact')
+  let currentContact = document.getElementById('current-contact');
+  currentContact.innerHTML = '';
+  classListAdd('current-contact', 'fly-in-contact');
   newContact.innerHTML = showContactTemplate(i);
-  classListAdd('new-contact', 'fly-in-contact')
+  classListAdd('new-contact', 'fly-in-contact');
   newContact.ontransitionend = function () {
-    updateContactContainer(newContact, currentContact)
+    updateContactContainer(newContact, currentContact);
     newContact.ontransitionend = null;
-  }
+  };
 }
 
-
-function classListAdd(id, addClass){
-  document.getElementById(id).classList.add(addClass)
+function classListAdd(id, addClass) {
+  document.getElementById(id).classList.add(addClass);
 }
 
-function classListRemove(id, addClass){
-  document.getElementById(id).classList.remove(addClass)
+function classListRemove(id, addClass) {
+  document.getElementById(id).classList.remove(addClass);
 }
-
 
 function updateContactContainer(newContact, currentContact) {
   currentContact.innerHTML = newContact.innerHTML;
-  newContact.innerHTML = ''
+  newContact.innerHTML = '';
   classListRemove('new-contact', 'fly-in-contact');
 }
 
-
-function openMenuContactResponsive(i){
-  classListRemove('close-menu-contact-responsive', 'd-none')
-  document.getElementById('open-menu-contact-responsive').innerHTML = openMenuContactResponsiveTemplate(i); 
+function openMenuContactResponsive(i) {
+  classListRemove('close-menu-contact-responsive', 'd-none');
+  document.getElementById('open-menu-contact-responsive').innerHTML = openMenuContactResponsiveTemplate(i);
 }
 
-
-function  closeMenuContactResponsive(i){
-  if(document.getElementById('close-menu-contact-responsive') != null){
-    classListAdd('close-menu-contact-responsive', 'd-none')
+function closeMenuContactResponsive(i) {
+  if (document.getElementById('close-menu-contact-responsive') != null) {
+    classListAdd('close-menu-contact-responsive', 'd-none');
     document.getElementById('open-menu-contact-responsive').innerHTML = closeMenuContactResponsiveTemplate(i);
   }
 }
-
 
 function insertDirectory() {
   document.getElementById('contacts-overview').innerHTML = '';
   for (let i = 0; i < alphabet.length; i++) {
     const letter = alphabet[i];
-    document.getElementById('contacts-overview').innerHTML +=
-      insertDirectoryTemplate(letter);
+    document.getElementById('contacts-overview').innerHTML += insertDirectoryTemplate(letter);
   }
 }
-
 
 function insertContacts() {
   for (let i = 0; i < contacts.length; i++) {
@@ -98,21 +87,18 @@ function insertContacts() {
     let initialLetter = name.charAt(0).toLowerCase();
     let section = document.getElementById('section-' + initialLetter);
     section.innerHTML += insertContactsTemmplate(i, name);
-    classListRemove('section-' + initialLetter, 'd-none')
+    classListRemove('section-' + initialLetter, 'd-none');
   }
 }
-
 
 function highligtContact(i) {
   highlightedContact = 'contact-' + i;
   setHighligtContact();
 }
 
-
 function setHighligtContact() {
   classListAdd(highlightedContact, 'highlight-contact');
 }
-
 
 function removeHighligtContact() {
   id = highlightedContact;
@@ -121,7 +107,6 @@ function removeHighligtContact() {
     highlightedContact = '';
   }
 }
-
 
 function createContact() {
   event.preventDefault();
@@ -132,7 +117,6 @@ function createContact() {
   createOrEditContact(name, telephone, email, initials);
   setEditToFalse();
 }
-
 
 async function createOrEditContact(name, telephone, email, initials) {
   if (contactIndex != -1) {
@@ -148,16 +132,14 @@ async function createOrEditContact(name, telephone, email, initials) {
   popUpContactCreated();
 }
 
-
-function popUpContactCreated(){
-  if (contactIndex = -1) {
-    classListAdd('contact-success', 'contact-success-fly-in')
+function popUpContactCreated() {
+  if ((contactIndex = -1)) {
+    classListAdd('contact-success', 'contact-success-fly-in');
     setTimeout(() => {
-    classListRemove('contact-success', 'contact-success-fly-in')
+      classListRemove('contact-success', 'contact-success-fly-in');
     }, 1000);
   }
 }
-
 
 async function createNewContact(name, telephone, email, initials) {
   let bg = randomColorGenerator();
@@ -166,37 +148,33 @@ async function createNewContact(name, telephone, email, initials) {
     telephone: telephone,
     email: email,
     initials: initials,
-    bgColor: bg
+    bgColor: bg,
   });
   await saveContacts();
   lastIndex = contacts.length - 1;
   highlightedContact = 'contact-' + lastIndex;
 }
 
-
 async function editExistingContact(name, telephone, email, initials) {
-  let bg = contacts[currentContact]['bgColor']
+  let bg = contacts[currentContact]['bgColor'];
   contacts.splice(contactIndex, 1, {
     name: name,
     telephone: telephone,
     email: email,
     initials: initials,
-    bgColor: bg
+    bgColor: bg,
   });
   await saveContacts();
 }
 
-
-async function saveContacts(){
+async function saveContacts() {
   await setItem('contacts', JSON.stringify(contacts));
 }
-
 
 function renderAddContact() {
   openAddContact();
   insertContentAddEdit('add');
 }
-
 
 function openAddContact() {
   let addContact = document.getElementById('add-contact-bg');
@@ -206,7 +184,6 @@ function openAddContact() {
     classListAdd('fly-in-container', 'fly-in-add-edit');
   }, 50);
 }
-
 
 function insertContentAddEdit(addOrEdit) {
   headline = document.getElementById('headline-add-edit');
@@ -223,7 +200,6 @@ function contentAddContact(headline, subheadline, button) {
   headline.innerHTML = 'Add Contact';
   subheadline.innerHTML = 'Tasks are better with a team!';
   button.innerHTML = 'Create Contact';
-
 }
 
 function contentEditContact(headline, subheadline, button) {
@@ -236,11 +212,11 @@ function contentEditContact(headline, subheadline, button) {
 
 function closeAddContact() {
   flyIn = document.getElementById('fly-in-container');
-  classListRemove('fly-in-container', 'fly-in-add-edit')
+  classListRemove('fly-in-container', 'fly-in-add-edit');
   flyIn.ontransitionend = function () {
-    classListAdd('add-contact-bg', 'd-none')
+    classListAdd('add-contact-bg', 'd-none');
     flyIn.ontransitionend = null;
-  }
+  };
   setEditToFalse();
 }
 
@@ -256,11 +232,9 @@ function saveContactIndex(i) {
   contactIndex = i;
 }
 
-
 function setEditToFalse() {
   contactIndex = -1;
 }
-
 
 function getInputValueContact() {
   let getName = document.getElementById('name-single-view').innerHTML;
@@ -273,70 +247,73 @@ function getInputValueContact() {
   document.getElementById('initial-edit-contact').innerHTML = initials;
 }
 
-
 async function deleteContact(i, cResponsive) {
   contacts.splice(i, 1);
   await setItem('contacts', JSON.stringify(contacts));
-  if(cResponsive != true){
+  if (cResponsive != true) {
     removeHighligtContact();
-  }else{
-    render(templateContacts())
+  } else {
+    render(templateContacts());
   }
   renderContactSection();
 }
 
-
 function showContactResponsiv(jsonIndex) {
-  if (x.matches) { // If media query matches
-    classListAdd('contact-single-view', 'd-none')
-    document.getElementById('render-container').innerHTML = showContactResponsivTemplate(jsonIndex); 
-    document.getElementById('contact-single-view').style = 'display: unset'
+  if (x.matches) {
+    // If media query matches
+    classListAdd('contact-single-view', 'd-none');
+    document.getElementById('render-container').innerHTML = showContactResponsivTemplate(jsonIndex);
+    document.getElementById('contact-single-view').style = 'display: unset';
     document.getElementById('contact-single-view').innerHTML += showContactTemplate(jsonIndex);
+  }
 }
-}
-
 
 function closeContactResponsiv(i) {
   if (x.matches) {
     // document.getElementById('render-container').innerHTML = templateContacts();
-    render(templateContacts())
+    render(templateContacts());
     renderContactSection();
   }
 }
-
 
 // Safe and get contacts in remote Storage
 async function loadContacts() {
   contacts = JSON.parse(await getItem('contacts'));
 }
 
-
-
 async function setItem(key, value) {
   const payload = { key, value, token: STORAGE_TOKEN };
   return fetch(STORAGE_URL, {
     method: 'POST',
     body: JSON.stringify(payload),
-  }).then((response) => response.json());
+  }).then(response => response.json());
 }
-
 
 async function getItem(key) {
   const url = `${STORAGE_URL}?key=${key}&token=${STORAGE_TOKEN}`;
-  return await fetch(url)
-    .then((response) => response.json())
-    .then((response) => response.data.value);
+  try {
+    return await fetch(url)
+      .then(response => response.json())
+      .then(response => response.data.value);
+  } catch (error) {
+    console.log('this error', error);
+  }
 }
-
 
 //standard funktionen
 function getInitials(nameAsString) {
-  let initials = (fullname => fullname.map((n, i) => (i == 0 || i == fullname.length - 1) && n[0]).filter(n => n).join(''))
-    (nameAsString.split(' ')).toUpperCase();
-  return initials
+  let initials = (fullname =>
+    fullname
+      .map((n, i) => (i == 0 || i == fullname.length - 1) && n[0])
+      .filter(n => n)
+      .join(''))(nameAsString.split(' ')).toUpperCase();
+  return initials;
 }
 
 function randomColorGenerator() {
-  let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-  return randomColor
+  let rChannel = Math.floor(Math.random() * 255);
+  let gChannel = Math.floor(Math.random() * 255);
+  let bChannel = Math.floor(Math.random() * 255);
+  let randomColor = `rgba(${rChannel}, ${gChannel}, ${bChannel})`;
+  return randomColor;
 }

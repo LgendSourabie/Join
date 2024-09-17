@@ -56,12 +56,10 @@ body {
   width: 19.5rem;
   background-color: white;
   border-radius: 0.63rem;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #a8a8a8;
+  border: 1px solid #a8a8a8;
   display: flex;
   align-items: center;
-  padding-block: 2px;
+  padding-block: 4px;
 }
 
 .bold-task-title {
@@ -526,7 +524,7 @@ body {
   }
 
   .prioSelection img {
-    width: 33%;
+    width: 31%;
   }
 
   .editTaskTest1 {

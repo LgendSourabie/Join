@@ -84,9 +84,9 @@ body {
   padding-top: 7rem;
 }
 
-.addTaskContainerTwo {
+/* .addTaskContainerTwo {
   width: 790px;
-}
+} */
 
 .groupButtonForm {
   display: flex;
@@ -103,7 +103,7 @@ body {
 
 .inputAddTask {
   border-radius: 10px;
-  padding: 10px;
+  padding: 12px;
   cursor: pointer;
   background-color: #ffffff;
   width: 100%;
@@ -118,7 +118,7 @@ body {
 .inputAddTaskSubtask {
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 12px;
 }
 
 .test_test {
@@ -146,7 +146,7 @@ textarea {
 select {
   border-radius: 10px;
   border: 1px solid #a8a8a8;
-  padding: 10px;
+  padding: 12px;
   cursor: pointer;
   appearance: none;
   background-image: url('../assets/extra_icons/arrow_drop_down.svg');
@@ -195,7 +195,7 @@ select {
 
 .prioSelection {
   display: flex;
-  gap: 16px;
+  justify-content: space-between;
 }
 
 .prio {
@@ -224,7 +224,9 @@ select {
 .footerAddTask {
   display: flex;
   justify-content: space-between;
-  width: 790px;
+  max-width: 790px;
+  width: 65vw;
+  margin-right: 4rem;
   margin-top: 3rem;
 }
 
@@ -306,6 +308,7 @@ select {
 
 .test3 {
   display: flex;
+  margin-right: 4rem;
 }
 
 .dropDownImg:hover {
@@ -422,7 +425,8 @@ li {
 /* RESPONSIVE DESIGN */
 
 .testPrio {
-  width: 95px;
+  /* width: 95px; */
+  width: 31%;
   /* height: 54px; */
   border-radius: 10px;
 }
@@ -441,7 +445,7 @@ li {
 }
 
 .dropdown {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #a8a8a8;
   width: 100%;
   border-radius: 10px;
@@ -637,9 +641,9 @@ li {
     padding-left: 0;
   }
 
-  .footerAddTask {
+  /* .footerAddTask {
     margin-top: 155px;
-  }
+  } */
 
   .options {
     top: 415px;
